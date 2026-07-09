@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotter AI — Kullanım Koşulları / Terms of Use</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.7;
+            padding: 24px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 8px;
+            letter-spacing: -0.02em;
+        }
+        .subtitle {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 32px;
+        }
+        .lang-switcher {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 32px;
+        }
+        .lang-btn {
+            padding: 8px 20px;
+            border-radius: 8px;
+            border: 1px solid #333;
+            background: transparent;
+            color: #888;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s, border-color 0.2s;
+        }
+        .lang-btn.active {
+            background: #6C5CE7;
+            color: #fff;
+            border-color: #6C5CE7;
+        }
+        .lang-btn:hover:not(.active) {
+            border-color: #6C5CE7;
+            color: #bbb;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-top: 32px;
+            margin-bottom: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #ddd;
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+        p, li {
+            font-size: 15px;
+            color: #ccc;
+            margin-bottom: 12px;
+        }
+        ul { padding-left: 24px; }
+        li { margin-bottom: 6px; }
+        .warning {
+            background: rgba(108, 92, 231, 0.1);
+            border-left: 3px solid #6C5CE7;
+            padding: 16px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+        }
+        .warning p { color: #ddd; margin-bottom: 0; }
+        .section { display: none; }
+        .section.active { display: block; }
+        .footer {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid #222;
+            text-align: center;
+            color: #666;
+            font-size: 13px;
+        }
+        a { color: #6C5CE7; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Spotter AI</h1>
+        <p class="subtitle" id="page-subtitle">Kullanım Koşulları</p>
+
+        <div class="lang-switcher">
+            <button class="lang-btn active" onclick="switchLang('tr')">Türkçe</button>
+            <button class="lang-btn" onclick="switchLang('en')">English</button>
+        </div>
+
+        <!-- TÜRKÇE -->
+        <div id="tr-content" class="section active">
+            <p><strong>Son Güncelleme: 9 Mayıs 2026</strong></p>
+            <p>Bu Kullanım Koşulları, Spotter AI mobil uygulamasını ve masaüstü yazılımını ('Uygulama') ve generads-ai tarafından sunulan tüm ilgili hizmetleri kullanımınızı düzenleyen hukuki bağlayıcı bir sözleşmedir. Uygulamayı indirmek, yüklemek, açmak veya herhangi bir biçimde kullanmak suretiyle bu koşulların tamamını okuduğunuzu, anladığınızı ve kabul ettiğinizi beyan etmiş sayılırsınız.</p>
+
+            <h2>MADDE 1 — TARAFLAR VE TANIMLAR</h2>
+            <h3>1.1 Taraflar</h3>
+            <p>İşbu Kullanım Koşulları; merkezi GitHub üzerinde generads-ai organizasyonu bünyesinde faaliyet gösteren Spotter AI geliştirici ekibi ('Geliştirici', 'Biz', 'Bizim') ile Uygulamayı kullanan gerçek kişi ('Kullanıcı', 'Siz') arasında akdedilmektedir.</p>
+            <h3>1.2 Tanımlar</h3>
+            <ul>
+                <li><strong>'Uygulama':</strong> Spotter AI adıyla sunulan Python masaüstü prototipi (gym_dev/) ve Flutter ile geliştirilmiş mobil uygulama (gym_ai_mobile/) dahil tüm yazılım bileşenleri.</li>
+                <li><strong>'Hizmet':</strong> Uygulama aracılığıyla sunulan gerçek zamanlı poz algılama, tekrar sayımı, form analizi, egzersiz kütüphanesi, kalori takibi, beslenme önerileri, bulut senkronizasyonu ve diğer tüm işlevler.</li>
+                <li><strong>'Kullanıcı İçeriği':</strong> Kullanıcının Uygulama üzerinden oluşturduğu, yüklediği veya paylaştığı her türlü veri, görüntü, profil bilgisi ve egzersiz kaydı.</li>
+                <li><strong>'Kamera Verisi':</strong> Poz algılama amacıyla kamera aracılığıyla işlenen canlı veya kaydedilmiş görüntü akışı.</li>
+                <li><strong>'Biyometrik Veri':</strong> Eklem koordinatları, hareket açıları, vücut yağ oranı hesaplamaları ve iskelet landmark verileri dahil Uygulamanın işlediği fiziksel ölçüm verileri.</li>
+                <li><strong>'Supabase Hizmetleri':</strong> Kullanıcı kimlik doğrulama, veritabanı ve bulut senkronizasyon altyapısını sağlayan üçüncü taraf hizmet sağlayıcısı.</li>
+            </ul>
+
+            <h2>MADDE 2 — EHLİYET VE KULLANIM ŞARTLARI</h2>
+            <h3>2.1 Yaş Şartı</h3>
+            <p>Uygulamayı kullanabilmek için en az 18 yaşında olmanız gerekmektedir. 13-17 yaş aralığındaki bireyler, yalnızca ebeveyn veya yasal vasisinin açık yazılı onayı ile Uygulamayı kullanabilir. 13 yaşın altındaki bireyler Uygulamayı kesinlikle kullanamaz.</p>
+            <h3>2.2 Sağlık Uygunluğu</h3>
+            <p>Uygulamayı kullanmadan önce, özellikle kronik hastalığı, hareket kısıtlılığı, geçirmiş ameliyat veya yaralanması bulunan bireyler bir sağlık profesyoneline danışmalıdır.</p>
+            <h3>2.3 Hesap Kaydı</h3>
+            <p>Mobil uygulamanın belirli özelliklerinden yararlanmak için hesap oluşturulması zorunludur. Kullanıcı; doğru, güncel ve eksiksiz bilgi sağlamakla yükümlüdür.</p>
+
+            <h2>MADDE 3 — SAĞLIK VE GÜVENLİK UYARISI</h2>
+            <div class="warning">
+                <p><strong>ÖNEMLİ UYARI:</strong> Spotter AI tıbbi bir cihaz değildir ve tıbbi tavsiye sunmamaktadır. Uygulama yalnızca genel bilgilendirme ve egzersiz takibi amacıyla tasarlanmıştır.</p>
+            </div>
+            <h3>3.1 Tıbbi Sorumluluk Reddi</h3>
+            <p>Form analizi, eklem açısı ölçümü ve beslenme önerileri yalnızca genel yönlendirme amacı taşımaktadır. Egzersiz sırasında ağrı, baş dönmesi, nefes darlığı veya herhangi bir rahatsızlık hissederseniz antrenmanı derhal sonlandırın.</p>
+            <h3>3.2 Yaralanma Riski</h3>
+            <p>Her egzersiz programı yaralanma riski barındırmaktadır. Geliştirici; yanlış form kullanımı, aşırı yüklenme veya bireysel sağlık koşullarına aykırı hareket seçimi nedeniyle oluşabilecek yaralanmalardan sorumlu değildir.</p>
+            <h3>3.3 Poz Algılama Sınırlılıkları</h3>
+            <p>Gerçek zamanlı poz algılama teknolojisi; yetersiz aydınlatma, kamera açısı, giyim seçimi veya arka plan koşulları nedeniyle hata üretebilir. Yüzde yüz doğruluk garantisi verilmemektedir.</p>
+
+            <h2>MADDE 4 — İZİN VERİLEN VE YASAK KULLANIMLAR</h2>
+            <h3>4.1 İzin Verilen Kullanımlar</h3>
+            <ul>
+                <li>Kişisel egzersiz takibi ve form analizi.</li>
+                <li>Bireysel fitness ilerleme kaydı ve istatistik görüntüleme.</li>
+                <li>Uygulamanın sunduğu egzersiz kütüphanesine erişim.</li>
+                <li>Kişisel antrenman programı ve takvim oluşturma.</li>
+                <li>Yürürlükteki mevzuata ve bu Kullanım Koşullarına uygun her türlü meşru kişisel kullanım.</li>
+            </ul>
+            <h3>4.2 Yasak Kullanımlar</h3>
+            <ul>
+                <li>Uygulamanın kaynak kodunu tersine mühendislik yoluyla çözmeye, kopyalamaya, dağıtmaya veya ticari amaçla kullanmaya çalışmak.</li>
+                <li>Uygulamanın altyapısını, sunucularını veya ağ bileşenlerini bozmaya veya yetkisiz erişim sağlamaya çalışmak.</li>
+                <li>Başka kullanıcıların hesap bilgilerine yetkisiz biçimde erişmek.</li>
+                <li>Yanıltıcı, sahte veya başkasına ait kimlik bilgileriyle hesap oluşturmak.</li>
+                <li>Uygulamayı tıbbi teşhis veya profesyonel fizyoterapi hizmeti yerine kullanmak.</li>
+                <li>Uygulamayı üçüncü şahıslara zarar verme, taciz etme veya yasa dışı amaçlarla kullanmak.</li>
+                <li>Uygulamaya bot, otomatik betik veya insan dışı aracılar üzerinden erişmek.</li>
+                <li>Uygulamanın herhangi bir bileşenini ticari amaçla lisanssız olarak çoğaltmak veya dağıtmak.</li>
+            </ul>
+
+            <h2>MADDE 5 — FİKRİ MÜLKİYET HAKLARI</h2>
+            <h3>5.1 Sahiplik</h3>
+            <p>Uygulama ve içerdiği tüm materyaller generads-ai organizasyonunun münhasır mülkiyetinde olup telif hakkı, patent, ticari sır ve diğer fikri mülkiyet mevzuatı kapsamında korunmaktadır.</p>
+            <h3>5.2 Kullanım Lisansı</h3>
+            <p>Geliştirici, kullanıcıya; bu Kullanım Koşullarına uyması kaydıyla, Uygulamayı kişisel ve ticari olmayan amaçlarla kullanmak için sınırlı, münhasır olmayan, devredilemez ve geri alınabilir bir lisans tanımaktadır.</p>
+            <h3>5.3 Kullanıcı İçeriği</h3>
+            <p>Kullanıcı, Uygulama aracılığıyla oluşturduğu içeriklerin mülkiyetini elinde bulundurur. Kullanıcı, söz konusu içerikleri Uygulamaya yükleyerek Geliştiriciye; bu içerikleri Hizmeti sunmak ve iyileştirmek üzere dünya genelinde, telifsiz, münhasır olmayan bir lisans vermektedir.</p>
+            <h3>5.4 Açık Kaynak Bileşenler</h3>
+            <p>Uygulama; MediaPipe, OpenCV, Google ML Kit ve diğer açık kaynak kütüphanelerden yararlanmaktadır. Bu bileşenler kendi lisansları kapsamında sunulmaktadır.</p>
+
+            <h2>MADDE 6 — ÜÇÜNCÜ TARAF HİZMETLER</h2>
+            <h3>6.1 Supabase</h3>
+            <p>Mobil uygulama; kimlik doğrulama, veri depolama ve bulut senkronizasyonu için Supabase hizmetlerinden yararlanmaktadır. Kullanıcı bu özellikleri kullanmakla Supabase'in Hizmet Koşulları ve Gizlilik Politikasını da kabul etmiş sayılır.</p>
+            <h3>6.2 Google ML Kit ve MediaPipe</h3>
+            <p>Poz algılama işlevi; Google ML Kit ve MediaPipe teknolojilerine dayanmaktadır. Bu teknolojiler Google'ın kullanım koşulları kapsamındadır.</p>
+
+            <h2>MADDE 7 — SORUMLULUK SINIRLAMASI VE GARANTİ REDDİ</h2>
+            <h3>7.1 Garanti Reddi</h3>
+            <p>Uygulama 'olduğu gibi' (as-is) ve 'mevcut haliyle' sunulmaktadır. Geliştirici; Uygulamanın belirli bir amaca uygunluğu, ticari elverişliliği, kesintisizliği, hatasızlığı veya güvenliği konusunda açık ya da zımni herhangi bir garanti vermemektedir.</p>
+            <h3>7.2 Sorumluluk Sınırı</h3>
+            <p>Geliştirici; Uygulamanın kullanımından kaynaklanan dolaylı, arızi, özel, sonuçsal veya cezai zararlardan sorumlu tutulamaz. Geliştiricinin toplam sorumluluğu, kullanıcının son 12 ay içinde Uygulama için ödediği toplam ücretle sınırlıdır.</p>
+
+            <h2>MADDE 8 — TAZMİNAT</h2>
+            <p>Kullanıcı; işbu Kullanım Koşullarını ihlal etmesi nedeniyle ortaya çıkabilecek her türlü talep, dava ve masraftan Geliştiriciyi tazmin etmeyi kabul eder.</p>
+
+            <h2>MADDE 9 — HİZMETİN DEĞİŞTİRİLMESİ VE SONLANDIRILMASI</h2>
+            <p>Geliştirici, Uygulamayı ve bu Kullanım Koşullarını herhangi bir zamanda değiştirme, güncelleme, askıya alma veya sona erdirme hakkını saklı tutar. Kullanıcı da dilediği zaman hesabını kapatabilir.</p>
+
+            <h2>MADDE 10 — UYGULANACAK HUKUK VE UYUŞMAZLIK ÇÖZÜMÜ</h2>
+            <h3>10.1 Uygulanacak Hukuk</h3>
+            <p>İşbu Kullanım Koşulları; Türkiye Cumhuriyeti kanunlarına göre yorumlanır ve uygulanır.</p>
+            <h3>10.2 Yetkili Mahkeme</h3>
+            <p>İstanbul (Çağlayan) Mahkemeleri ve İcra Müdürlükleri münhasıran yetkilidir.</p>
+            <h3>10.3 Alternatif Uyuşmazlık Çözümü</h3>
+            <p>Taraflar, dava yoluna başvurmadan önce uyuşmazlığı müzakere yoluyla çözmeye gayret edeceklerdir.</p>
+
+            <h2>MADDE 11 — ÇEŞİTLİ HÜKÜMLER</h2>
+            <p>Bu Kullanım Koşullarının herhangi bir hükmünün geçersiz bulunması diğer hükümlerin geçerliliğini etkilemez. Bu Kullanım Koşulları ve Gizlilik Politikası, taraflar arasındaki konuya ilişkin tüm anlaşmayı oluşturur.</p>
+            <p>İletişim: GitHub üzerindeki generads-ai organizasyonu iletişim kanalları.</p>
+
+            <p><em>Bu Kullanım Koşulları 9 Mayıs 2026 tarihinde yürürlüğe girmiştir.</em></p>
+        </div>
+
+        <!-- ENGLISH -->
+        <div id="en-content" class="section">
+            <p><strong>Last Updated: May 9, 2026</strong></p>
+            <p>These Terms of Use constitute a legally binding agreement governing your use of the Spotter AI mobile application and desktop software ('Application') and all related services provided by generads-ai. By downloading, installing, opening, or using the Application in any way, you represent that you have read, understood, and accepted all of these terms.</p>
+
+            <h2>ARTICLE 1 — PARTIES AND DEFINITIONS</h2>
+            <h3>1.1 Parties</h3>
+            <p>These Terms of Use are entered into between the Spotter AI developer team operating within the generads-ai organization on GitHub ('Developer', 'We', 'Our') and the natural person using the Application ('User', 'You').</p>
+            <h3>1.2 Definitions</h3>
+            <ul>
+                <li><strong>'Application':</strong> All software components including the Python desktop prototype (gym_dev/) and the Flutter-developed mobile application (gym_ai_mobile/) offered under the name Spotter AI.</li>
+                <li><strong>'Service':</strong> Real-time pose detection, repetition counting, form analysis, exercise library, calorie tracking, nutritional recommendations, cloud synchronization, and all other functions offered through the Application.</li>
+                <li><strong>'User Content':</strong> Any data, images, profile information, and exercise records created, uploaded, or shared by the User through the Application.</li>
+                <li><strong>'Camera Data':</strong> Live or recorded image stream processed via the camera for pose detection purposes.</li>
+                <li><strong>'Biometric Data':</strong> Physical measurement data processed by the Application, including joint coordinates, movement angles, body fat percentage calculations, and skeletal landmark data.</li>
+                <li><strong>'Supabase Services':</strong> Third-party service provider providing user authentication, database, and cloud synchronization infrastructure.</li>
+            </ul>
+
+            <h2>ARTICLE 2 — ELIGIBILITY AND TERMS OF USE</h2>
+            <h3>2.1 Age Requirement</h3>
+            <p>You must be at least 18 years old to use the Application. Individuals between the ages of 13-17 may use the Application only with the explicit written consent of a parent or legal guardian. Individuals under the age of 13 may strictly not use the Application.</p>
+            <h3>2.2 Health Suitability</h3>
+            <p>Before using the Application, individuals, especially those with chronic illnesses, mobility limitations, past surgeries, or injuries, should consult a health professional.</p>
+            <h3>2.3 Account Registration</h3>
+            <p>To benefit from certain features, account creation is mandatory. The User is obligated to provide accurate, current, and complete information.</p>
+
+            <h2>ARTICLE 3 — HEALTH AND SAFETY WARNING</h2>
+            <div class="warning">
+                <p><strong>IMPORTANT WARNING:</strong> Spotter AI is not a medical device and does not offer medical advice. The Application is designed solely for general information and exercise tracking purposes.</p>
+            </div>
+            <h3>3.1 Medical Disclaimer</h3>
+            <p>Form analysis, joint angle measurement, and nutritional recommendations are for general guidance purposes only. If you feel pain, dizziness, shortness of breath, or any discomfort during exercise, end the workout immediately.</p>
+            <h3>3.2 Risk of Injury</h3>
+            <p>Every exercise program carries a risk of injury. The Developer is not responsible for injuries that may occur due to improper form usage, overloading, or choosing movements contrary to individual health conditions.</p>
+            <h3>3.3 Pose Detection Limitations</h3>
+            <p>Real-time pose detection technology may produce errors due to insufficient lighting, camera angle, clothing choice, or background conditions. No one hundred percent accuracy guarantee is provided.</p>
+
+            <h2>ARTICLE 4 — PERMITTED AND PROHIBITED USES</h2>
+            <h3>4.1 Permitted Uses</h3>
+            <ul>
+                <li>Personal exercise tracking and form analysis.</li>
+                <li>Recording individual fitness progress and viewing statistics.</li>
+                <li>Accessing the exercise library offered by the Application.</li>
+                <li>Creating personal training programs and calendars.</li>
+                <li>Any legitimate personal use in accordance with applicable legislation.</li>
+            </ul>
+            <h3>4.2 Prohibited Uses</h3>
+            <ul>
+                <li>Attempting to reverse engineer, copy, distribute, or use the Application's source code for commercial purposes.</li>
+                <li>Attempting to disrupt or provide unauthorized access to the Application's infrastructure.</li>
+                <li>Accessing other users' account information in an unauthorized manner.</li>
+                <li>Creating an account with misleading or fake identity information.</li>
+                <li>Using the Application instead of medical diagnosis or professional physiotherapy services.</li>
+                <li>Using the Application for harassment or illegal purposes.</li>
+                <li>Accessing the Application through bots or automated scripts.</li>
+                <li>Reproducing any component of the Application for commercial purposes without a license.</li>
+            </ul>
+
+            <h2>ARTICLE 5 — INTELLECTUAL PROPERTY RIGHTS</h2>
+            <p>The Application and all materials it contains are under the exclusive ownership of the generads-ai organization and are protected under copyright and intellectual property legislation. The Developer grants the user a limited, non-exclusive, non-transferable, and revocable license to use the Application for personal and non-commercial purposes.</p>
+
+            <h2>ARTICLE 6 — THIRD PARTY SERVICES</h2>
+            <p><strong>Supabase:</strong> The mobile application utilizes Supabase services for authentication, data storage, and cloud synchronization.</p>
+            <p><strong>Google ML Kit and MediaPipe:</strong> The pose detection function is based on Google ML Kit and MediaPipe technologies.</p>
+
+            <h2>ARTICLE 7 — LIMITATION OF LIABILITY</h2>
+            <p>The Application is offered 'as-is' and 'as available'. The Developer does not give any express or implied warranty regarding the Application's suitability, continuity, or security. The Developer cannot be held responsible for indirect, incidental, special, or consequential damages arising from the use of the Application.</p>
+
+            <h2>ARTICLE 8 — INDEMNIFICATION</h2>
+            <p>The User agrees to indemnify and hold harmless the Developer from any claim or expense arising from violation of these Terms of Use.</p>
+
+            <h2>ARTICLE 9 — MODIFICATION AND TERMINATION</h2>
+            <p>The Developer reserves the right to modify, update, suspend, or terminate the Application and these Terms of Use at any time without prior notice.</p>
+
+            <h2>ARTICLE 10 — GOVERNING LAW</h2>
+            <p>These Terms of Use are interpreted and applied according to the laws of the Republic of Turkey. Istanbul (Caglayan) Courts and Execution Offices are exclusively authorized.</p>
+
+            <h2>ARTICLE 11 — MISCELLANEOUS</h2>
+            <p>If any provision of these Terms of Use is found invalid by a competent court, the remaining provisions continue in full force. These Terms of Use and the Privacy Policy constitute the entire agreement between the parties.</p>
+            <p>Contact: generads-ai organization communication channels on GitHub.</p>
+
+            <p><em>These Terms of Use became effective on May 9, 2026.</em></p>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 Spotter AI — generads-ai</p>
+        </div>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            document.getElementById('tr-content').classList.toggle('active', lang === 'tr');
+            document.getElementById('en-content').classList.toggle('active', lang === 'en');
+            document.getElementById('page-subtitle').textContent =
+                lang === 'tr' ? 'Kullanım Koşulları' : 'Terms of Use';
+            document.querySelectorAll('.lang-btn').forEach(function(btn) {
+                btn.classList.toggle('active', btn.textContent.trim() === (lang === 'tr' ? 'Türkçe' : 'English'));
+            });
+        }
+    </script>
+</body>
+</html>

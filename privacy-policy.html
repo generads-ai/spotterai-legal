@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotter AI — Gizlilik Politikası / Privacy Policy</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.7;
+            padding: 24px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 8px;
+            letter-spacing: -0.02em;
+        }
+        .subtitle {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 32px;
+        }
+        .lang-switcher {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 32px;
+        }
+        .lang-btn {
+            padding: 8px 20px;
+            border-radius: 8px;
+            border: 1px solid #333;
+            background: transparent;
+            color: #888;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s, border-color 0.2s;
+        }
+        .lang-btn.active {
+            background: #6C5CE7;
+            color: #fff;
+            border-color: #6C5CE7;
+        }
+        .lang-btn:hover:not(.active) {
+            border-color: #6C5CE7;
+            color: #bbb;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-top: 32px;
+            margin-bottom: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #ddd;
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+        p, li {
+            font-size: 15px;
+            color: #ccc;
+            margin-bottom: 12px;
+        }
+        ul { padding-left: 24px; }
+        li { margin-bottom: 6px; }
+        .warning {
+            background: rgba(108, 92, 231, 0.1);
+            border-left: 3px solid #6C5CE7;
+            padding: 16px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+        }
+        .warning p { color: #ddd; margin-bottom: 0; }
+        .section { display: none; }
+        .section.active { display: block; }
+        .footer {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid #222;
+            text-align: center;
+            color: #666;
+            font-size: 13px;
+        }
+        a { color: #6C5CE7; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Spotter AI</h1>
+        <p class="subtitle" id="page-subtitle">Gizlilik Politikası</p>
+
+        <div class="lang-switcher">
+            <button class="lang-btn active" onclick="switchLang('tr')">Türkçe</button>
+            <button class="lang-btn" onclick="switchLang('en')">English</button>
+        </div>
+
+        <!-- TÜRKÇE -->
+        <div id="tr-content" class="section active">
+            <p><strong>Son Güncelleme: 9 Mayıs 2026</strong></p>
+            <p>Bu Gizlilik Politikası, Spotter AI uygulamasının hangi kişisel verileri topladığını, bu verilerin nasıl işlendiğini, kimlerle paylaşıldığını ve kullanıcıların bu veriler üzerindeki haklarını açıklamaktadır. Verileriniz 6698 sayılı Kişisel Verilerin Korunması Kanunu ('KVKK') ve uygulanabilir diğer mevzuat çerçevesinde işlenmektedir.</p>
+
+            <h2>MADDE 1 — VERİ SORUMLUSU</h2>
+            <p>Kişisel verilerinizin işlenmesinden sorumlu taraf, GitHub üzerinde generads-ai organizasyonu bünyesinde faaliyet gösteren Spotter AI geliştirici ekibi ('Veri Sorumlusu'). Veri sorumlusuna ulaşmak için GitHub üzerindeki generads-ai organizasyonunun resmi iletişim kanallarını kullanabilirsiniz.</p>
+
+            <h2>MADDE 2 — TOPLANAN KİŞİSEL VERİLER</h2>
+            <h3>2.1 Kullanıcı Tarafından Doğrudan Sağlanan Veriler</h3>
+            <p>Uygulama kayıt veya kullanım sürecinde aşağıdaki verileri toplar:</p>
+            <ul>
+                <li>Ad, soyad ve kullanıcı adı.</li>
+                <li>E-posta adresi (hesap oluşturma ve kimlik doğrulama için).</li>
+                <li>Şifre (yalnızca şifrelenmiş/hash biçiminde saklanır; düz metin asla saklanmaz).</li>
+                <li>Yaş, cinsiyet, boy, kilo ve vücut yağ oranı (fitness takibi ve kalori hesaplama için).</li>
+                <li>Egzersiz tercihleri, antrenman programları ve hedefler.</li>
+                <li>Beslenme tercihleri (beslenme önerisi özelliği kullanılırsa).</li>
+            </ul>
+
+            <h3>2.2 Uygulama Kullanımı Sırasında Otomatik Toplanan Veriler</h3>
+            <ul>
+                <li>Kamera görüntüleri (poz algılama için gerçek zamanlı işlenir; koşullar 2.4'te açıklanmıştır).</li>
+                <li>İskelet landmark koordinatları (33 nokta, MediaPipe / Google ML Kit tarafından üretilir).</li>
+                <li>Eklem açısı ölçümleri ve hareket kalitesi skoru.</li>
+                <li>Tekrar sayısı, egzersiz süresi ve antrenman geçmişi.</li>
+                <li>Uygulama içi etkileşimler (seçilen egzersizler, menü gezintisi, özellik kullanımı).</li>
+                <li>Cihaz bilgileri (işletim sistemi, uygulama sürümü, donanım modeli — hata ayıklama amacıyla).</li>
+                <li>Ağ bağlantı türü ve genel konum (ülke/şehir düzeyinde — içerik kişiselleştirme için).</li>
+            </ul>
+
+            <h3>2.3 Biyometrik Veriler</h3>
+            <div class="warning">
+                <p><strong>Özel Kategori Veri Uyarısı:</strong> İskelet landmark verileri ve hareket analizi sonuçları, KVKK kapsamında biyometrik veri niteliği taşıyabilir. Bu veriler yalnızca egzersiz analizi işlevi için işlenmekte olup açık rızanız alınmaktadır.</p>
+            </div>
+
+            <h3>2.4 Kamera Verilerinin İşlenme Biçimi</h3>
+            <p>Kamera verisi cihaz üzerinde yerel olarak işlenir (on-device processing). Kamera görüntüleri varsayılan olarak Geliştirici sunucularına iletilmez veya depolanmaz. İşleme sonucu elde edilen iskelet koordinatları ve egzersiz metrikleri, bulut senkronizasyonu özelliği etkin olduğunda Supabase altyapısına aktarılır. Kullanıcı dilerse bu aktarımı uygulama ayarlarından devre dışı bırakabilir.</p>
+
+            <h2>MADDE 3 — VERİ İŞLEMENİN HUKUKİ DAYANAKLARI</h2>
+            <p>Kişisel verileriniz aşağıdaki hukuki dayanaklar kapsamında işlenmektedir:</p>
+            <ul>
+                <li><strong>Sözleşmenin ifası:</strong> Hesap oluşturma, kimlik doğrulama ve hizmet sunumu için zorunlu veriler.</li>
+                <li><strong>Meşru menfaat:</strong> Uygulama güvenliğini sağlama, hata ayıklama ve hizmet kalitesini iyileştirme.</li>
+                <li><strong>Açık rıza:</strong> Biyometrik veri işleme, pazarlama iletişimleri ve isteğe bağlı analitik.</li>
+                <li><strong>Yasal yükümlülük:</strong> İlgili mevzuatın gerektirdiği durumlarda zorunlu veri işleme.</li>
+            </ul>
+
+            <h2>MADDE 4 — VERİLERİN KULLANIM AMAÇLARI</h2>
+            <p>Toplanan veriler yalnızca aşağıdaki amaçlar doğrultusunda işlenmektedir:</p>
+            <ul>
+                <li>Poz algılama ve gerçek zamanlı form analizi hizmetini sunmak.</li>
+                <li>Egzersiz tekrar sayımı ve antrenman istatistiklerini kaydetmek.</li>
+                <li>Kullanıcıya kişiselleştirilmiş egzersiz, program ve beslenme önerileri sunmak.</li>
+                <li>Kalori ve vücut yağ oranı hesaplamalarını gerçekleştirmek.</li>
+                <li>Kullanıcı ilerleme grafiklerini ve liderlik tablosunu oluşturmak.</li>
+                <li>Hesap güvenliğini ve kimlik doğrulamasını sağlamak.</li>
+                <li>Teknik hataları tespit etmek ve uygulamayı geliştirmek.</li>
+                <li>Yasal yükümlülükleri yerine getirmek.</li>
+            </ul>
+
+            <h2>MADDE 5 — VERİLERİN PAYLAŞILMASI</h2>
+            <h3>5.1 Üçüncü Taraflarla Paylaşım</h3>
+            <ul>
+                <li><strong>Supabase:</strong> Kimlik doğrulama, veritabanı yönetimi ve bulut depolama hizmetleri için.</li>
+                <li><strong>Google LLC:</strong> Poz algılama için Google ML Kit API'si kullanılmaktadır.</li>
+                <li><strong>Yasal Yükümlülükler:</strong> Mahkeme kararı, yasal zorunluluk veya yetkili kamu kurumu talebi halinde.</li>
+                <li><strong>İş Devri:</strong> Organizasyonun birleşme, devralınma veya varlık satışı durumunda.</li>
+            </ul>
+
+            <h3>5.2 Paylaşılmayan Veriler</h3>
+            <p>Kişisel verileriniz hiçbir koşulda reklam ağlarına, veri aracılarına veya ticari amaçlarla üçüncü taraflara satılmaz, kiralanmaz ya da bu şekilde kullanılmak üzere devredilmez.</p>
+
+            <h3>5.3 Topluluk Özellikleri</h3>
+            <p>Liderlik tablosu ve topluluk özellikleri kullanıldığında, kullanıcı adı ve egzersiz istatistiklerinin diğer kullanıcılara görünür olabileceği konusunda kullanıcı önceden bilgilendirilir. Bu özellikler isteğe bağlıdır ve uygulama ayarlarından kapatılabilir.</p>
+
+            <h2>MADDE 6 — ULUSLARARASI VERİ TRANSFERİ</h2>
+            <p>Supabase altyapısı ve Google ML Kit hizmetleri, verilerinizin Türkiye dışındaki sunucularda işlenmesini gerektirebilir. Bu transferler; KVKK'nın 9. maddesi kapsamında Kişisel Verileri Koruma Kurulu'nun yeterli koruma kararı verdiği ülkeler veya yeterli güvencenin sağlandığı mekanizmalar aracılığıyla gerçekleştirilir.</p>
+
+            <h2>MADDE 7 — VERİ SAKLAMA SÜRELERİ</h2>
+            <ul>
+                <li><strong>Hesap verileri:</strong> Hesap aktif olduğu sürece; hesap silinmesinin ardından 30 gün içinde kalıcı olarak imha edilir.</li>
+                <li><strong>Egzersiz geçmişi ve antrenman kayıtları:</strong> Hesap aktif olduğu sürece; hesap silinmesinin ardından 30 gün içinde imha edilir.</li>
+                <li><strong>Biyometrik/iskelet verisi:</strong> Gerçek zamanlı işlem sonrasında cihazda depolanmaz; bulut senkronizasyonu aktifse işlenmiş metrikler yukarıdaki sürelere tabidir.</li>
+                <li><strong>Teknik log kayıtları:</strong> Azami 90 gün.</li>
+                <li><strong>Yasal yükümlülük kapsamındaki veriler:</strong> İlgili mevzuatın öngördüğü süre boyunca.</li>
+            </ul>
+
+            <h2>MADDE 8 — KULLANICI HAKLARI (KVKK KAPSAMINDA)</h2>
+            <p>6698 sayılı KVKK'nın 11. maddesi uyarınca aşağıdaki haklara sahipsiniz:</p>
+            <ul>
+                <li><strong>Bilgi edinme hakkı:</strong> Kişisel verilerinizin işlenip işlenmediğini öğrenme.</li>
+                <li><strong>Erişim hakkı:</strong> İşlenen kişisel verilerinize ve işleme amaçlarınıza erişim talep etme.</li>
+                <li><strong>Düzeltme hakkı:</strong> Yanlış veya eksik verilerin düzeltilmesini talep etme.</li>
+                <li><strong>Silme hakkı:</strong> İşleme koşullarının ortadan kalkması halinde verilerinizin silinmesini talep etme.</li>
+                <li><strong>İşlemenin kısıtlanması hakkı:</strong> Belirli koşullarda veri işlenmesinin durdurulmasını talep etme.</li>
+                <li><strong>Veri taşınabilirliği hakkı:</strong> Verilerinizi makine okunabilir formatta talep etme.</li>
+                <li><strong>İtiraz hakkı:</strong> Meşru menfaate dayanan işlemelere itiraz etme.</li>
+                <li><strong>Otomatik karara itiraz hakkı:</strong> Yalnızca otomatik işlemler sonucunda aleyhinize alınan kararlara itiraz etme.</li>
+            </ul>
+            <p>Bu haklarınızı kullanmak için GitHub üzerindeki generads-ai organizasyonu iletişim kanalları aracılığıyla başvurabilirsiniz. Talepler yasal süre olan 30 gün içinde yanıtlanacaktır.</p>
+
+            <h2>MADDE 9 — VERİ GÜVENLİĞİ</h2>
+            <h3>9.1 Teknik ve İdari Tedbirler</h3>
+            <ul>
+                <li>Aktarılan veriler TLS/SSL protokolüyle şifrelenmektedir.</li>
+                <li>Kullanıcı şifreler güçlü kriptografik hash algoritmaları (bcrypt/Argon2) ile saklanmaktadır.</li>
+                <li>Supabase Row Level Security (RLS) ile kullanıcıların yalnızca kendi verilerine erişimi sağlanmaktadır.</li>
+                <li>Uygulama sunucu erişimleri en az ayrıcalık ilkesine göre yönetilmektedir.</li>
+                <li>Düzenli güvenlik güncellemeleri ve bağımlılık denetimleri gerçekleştirilmektedir.</li>
+            </ul>
+            <h3>9.2 Güvenlik İhlali Bildirimi</h3>
+            <p>Kişisel verilerinizi etkileyen bir güvenlik ihlali tespit edilmesi halinde, KVKK'nın 12. maddesi uyarınca Kişisel Verileri Koruma Kurumuna ve etkilenen kullanıcılara yasal süre içinde bildirimde bulunulacaktır.</p>
+
+            <h2>MADDE 10 — ÇEREZLER VE TAKİP TEKNOLOJİLERİ</h2>
+            <p>Mobil uygulama geleneksel çerez kullanmamaktadır. Uygulama; oturum yönetimi için Supabase tarafından sağlanan güvenli yerel depolama (Secure Storage) mekanizmasını kullanmaktadır.</p>
+
+            <h2>MADDE 11 — ÇOCUKLARIN GİZLİLİĞİ</h2>
+            <p>Uygulama 13 yaşın altındaki bireylere yönelik değildir ve bu bireylerden bilerek kişisel veri toplanmamaktadır. 13 yaşın altında bir kullanıcının veri sağladığının tespit edilmesi halinde söz konusu veriler derhal silinecektir.</p>
+
+            <h2>MADDE 12 — GİZLİLİK POLİTİKASI DEĞİŞİKLİKLERİ</h2>
+            <p>Bu Gizlilik Politikası zaman zaman güncellenebilir. Önemli değişiklikler yapılması halinde kullanıcılar uygulama içi bildirim veya kayıtlı e-posta adresleri aracılığıyla bilgilendirilecektir.</p>
+
+            <h2>MADDE 13 — İLETİŞİM VE BAŞVURU</h2>
+            <p>Bu Gizlilik Politikasına ilişkin soru, talep veya şikayetleriniz için:</p>
+            <ul>
+                <li>GitHub: <a href="https://github.com/generads-ai">github.com/generads-ai</a></li>
+                <li>Kişisel Verileri Koruma Kurumu: <a href="https://www.kvkk.gov.tr">www.kvkk.gov.tr</a></li>
+            </ul>
+            <p><em>Bu Gizlilik Politikası 9 Mayıs 2026 tarihinde yürürlüğe girmiştir.</em></p>
+        </div>
+
+        <!-- ENGLISH -->
+        <div id="en-content" class="section">
+            <p><strong>Last Updated: May 9, 2026</strong></p>
+            <p>This Privacy Policy explains what personal data the Spotter AI application collects, how this data is processed, with whom it is shared, and the rights of users over this data. Your data is processed within the framework of the Personal Data Protection Law No. 6698 ('KVKK') and other applicable legislation.</p>
+
+            <h2>ARTICLE 1 — DATA CONTROLLER</h2>
+            <p>The party responsible for processing your personal data is the Spotter AI developer team operating within the generads-ai organization on GitHub ('Data Controller'). To reach the data controller, you can use the official communication channels of the generads-ai organization on GitHub.</p>
+
+            <h2>ARTICLE 2 — COLLECTED PERSONAL DATA</h2>
+            <h3>2.1 Data Directly Provided by the User</h3>
+            <p>The Application collects the following data during the registration or use process:</p>
+            <ul>
+                <li>Name, surname, and username.</li>
+                <li>Email address (for account creation and authentication).</li>
+                <li>Password (stored only in encrypted/hashed form; plain text is never stored).</li>
+                <li>Age, gender, height, weight, and body fat percentage (for fitness tracking and calorie calculation).</li>
+                <li>Exercise preferences, training programs, and goals.</li>
+                <li>Nutritional preferences (if the nutritional recommendation feature is used).</li>
+            </ul>
+
+            <h3>2.2 Data Automatically Collected During Application Use</h3>
+            <ul>
+                <li>Camera images (processed in real-time for pose detection; terms are explained in 2.4).</li>
+                <li>Skeletal landmark coordinates (33 points, generated by MediaPipe / Google ML Kit).</li>
+                <li>Joint angle measurements and movement quality score.</li>
+                <li>Repetition count, exercise duration, and training history.</li>
+                <li>In-app interactions (selected exercises, menu navigation, feature usage).</li>
+                <li>Device information (operating system, application version, hardware model — for debugging purposes).</li>
+                <li>Network connection type and general location (at country/city level — for content personalization).</li>
+            </ul>
+
+            <h3>2.3 Biometric Data</h3>
+            <div class="warning">
+                <p><strong>Special Category Data Warning:</strong> Skeletal landmark data and movement analysis results may carry the nature of biometric data under KVKK. This data is processed solely for the exercise analysis function and your explicit consent is obtained.</p>
+            </div>
+
+            <h3>2.4 Processing Method of Camera Data</h3>
+            <p>Camera data is processed locally on the device (on-device processing). Camera images are not transmitted to or stored on Developer servers by default. Skeletal coordinates and exercise metrics obtained as a result of processing are transferred to the Supabase infrastructure when the cloud synchronization feature is active. The user can disable this transfer from the application settings.</p>
+
+            <h2>ARTICLE 3 — LEGAL BASIS FOR DATA PROCESSING</h2>
+            <ul>
+                <li><strong>Performance of contract:</strong> Mandatory data for account creation, authentication, and service delivery.</li>
+                <li><strong>Legitimate interest:</strong> Ensuring application security, debugging, and improving service quality.</li>
+                <li><strong>Explicit consent:</strong> Biometric data processing, marketing communications, and optional analytics.</li>
+                <li><strong>Legal obligation:</strong> Mandatory data processing in cases required by applicable legislation.</li>
+            </ul>
+
+            <h2>ARTICLE 4 — PURPOSES OF DATA USE</h2>
+            <ul>
+                <li>Providing pose detection and real-time form analysis services.</li>
+                <li>Recording exercise repetition counts and training statistics.</li>
+                <li>Offering personalized exercise, program, and nutritional recommendations to the user.</li>
+                <li>Performing calorie and body fat percentage calculations.</li>
+                <li>Creating user progress charts and leaderboards.</li>
+                <li>Ensuring account security and authentication.</li>
+                <li>Detecting technical errors and improving the application.</li>
+                <li>Fulfilling legal obligations.</li>
+            </ul>
+
+            <h2>ARTICLE 5 — DATA SHARING</h2>
+            <h3>5.1 Sharing with Third Parties</h3>
+            <ul>
+                <li><strong>Supabase:</strong> For authentication, database management, and cloud storage services.</li>
+                <li><strong>Google LLC:</strong> Google ML Kit API is used for pose detection.</li>
+                <li><strong>Legal Obligations:</strong> In case of court order, legal requirement, or request from authorized public institution.</li>
+                <li><strong>Business Transfer:</strong> In case of merger, acquisition, or asset sale of the organization.</li>
+            </ul>
+            <h3>5.2 Data Not Shared</h3>
+            <p>Your personal data is never sold, rented, or transferred to advertising networks, data brokers, or third parties for commercial purposes under any circumstances.</p>
+            <h3>5.3 Community Features</h3>
+            <p>When leaderboard and community features are used, users are informed in advance that their username and exercise statistics may be visible to other users. These features are optional and can be turned off from application settings.</p>
+
+            <h2>ARTICLE 6 — INTERNATIONAL DATA TRANSFER</h2>
+            <p>Supabase infrastructure and Google ML Kit services may require your data to be processed on servers outside Turkey. These transfers are carried out through countries where the Personal Data Protection Board has given an adequate protection decision or mechanisms where adequate assurance is provided.</p>
+
+            <h2>ARTICLE 7 — DATA RETENTION PERIODS</h2>
+            <ul>
+                <li><strong>Account data:</strong> As long as the account is active; permanently destroyed within 30 days after account deletion.</li>
+                <li><strong>Exercise history:</strong> As long as the account is active; destroyed within 30 days after account deletion.</li>
+                <li><strong>Biometric/skeletal data:</strong> Not stored on device after real-time processing.</li>
+                <li><strong>Technical log records:</strong> Maximum 90 days.</li>
+                <li><strong>Data under legal obligation:</strong> For the period prescribed by applicable legislation.</li>
+            </ul>
+
+            <h2>ARTICLE 8 — USER RIGHTS (UNDER KVKK)</h2>
+            <ul>
+                <li>Right to information: Learning whether your personal data is processed.</li>
+                <li>Right of access: Requesting access to your processed personal data.</li>
+                <li>Right to rectification: Requesting correction of incorrect or incomplete data.</li>
+                <li>Right to erasure: Requesting deletion of your data when processing conditions are eliminated.</li>
+                <li>Right to restriction: Requesting suspension of data processing under certain conditions.</li>
+                <li>Right to data portability: Requesting your data in machine-readable format.</li>
+                <li>Right to object: Objecting to processing based on legitimate interest.</li>
+                <li>Right to object to automated decisions.</li>
+            </ul>
+            <p>To exercise these rights, apply through the generads-ai organization on GitHub. Requests will be responded to within 30 days.</p>
+
+            <h2>ARTICLE 9 — DATA SECURITY</h2>
+            <ul>
+                <li>Transferred data is encrypted with TLS/SSL protocol.</li>
+                <li>User passwords are stored with strong cryptographic hash algorithms (bcrypt/Argon2).</li>
+                <li>Supabase Row Level Security (RLS) ensures users can only access their own data.</li>
+                <li>Application server access is managed according to the principle of least privilege.</li>
+                <li>Regular security updates and dependency audits are performed.</li>
+            </ul>
+
+            <h2>ARTICLE 10 — COOKIES AND TRACKING</h2>
+            <p>The mobile application does not use traditional cookies. The application uses secure local storage provided by Supabase for session management.</p>
+
+            <h2>ARTICLE 11 — CHILDREN'S PRIVACY</h2>
+            <p>The Application is not intended for individuals under the age of 13, and personal data is not knowingly collected from them.</p>
+
+            <h2>ARTICLE 12 — CHANGES TO PRIVACY POLICY</h2>
+            <p>This Privacy Policy may be updated from time to time. In case of significant changes, users will be notified via in-app notification or registered email addresses.</p>
+
+            <h2>ARTICLE 13 — CONTACT</h2>
+            <ul>
+                <li>GitHub: <a href="https://github.com/generads-ai">github.com/generads-ai</a></li>
+                <li>Personal Data Protection Authority: <a href="https://www.kvkk.gov.tr">www.kvkk.gov.tr</a></li>
+            </ul>
+            <p><em>This Privacy Policy became effective on May 9, 2026.</em></p>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 Spotter AI — generads-ai</p>
+        </div>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            document.getElementById('tr-content').classList.toggle('active', lang === 'tr');
+            document.getElementById('en-content').classList.toggle('active', lang === 'en');
+            document.getElementById('page-subtitle').textContent =
+                lang === 'tr' ? 'Gizlilik Politikası' : 'Privacy Policy';
+            document.querySelectorAll('.lang-btn').forEach(function(btn) {
+                btn.classList.toggle('active', btn.textContent.trim() === (lang === 'tr' ? 'Türkçe' : 'English'));
+            });
+        }
+    </script>
+</body>
+</html>
