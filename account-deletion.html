@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotter AI — Account Deletion / Hesap Silme</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.7;
+            padding: 24px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 8px;
+            letter-spacing: -0.02em;
+        }
+        .subtitle {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 32px;
+        }
+        .lang-switcher {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 32px;
+        }
+        .lang-btn {
+            padding: 8px 20px;
+            border-radius: 8px;
+            border: 1px solid #333;
+            background: transparent;
+            color: #888;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s, border-color 0.2s;
+        }
+        .lang-btn.active {
+            background: #6C5CE7;
+            color: #fff;
+            border-color: #6C5CE7;
+        }
+        .lang-btn:hover:not(.active) {
+            border-color: #6C5CE7;
+            color: #bbb;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-top: 32px;
+            margin-bottom: 12px;
+        }
+        p, li {
+            font-size: 15px;
+            color: #ccc;
+            margin-bottom: 12px;
+        }
+        ul, ol { padding-left: 24px; }
+        li { margin-bottom: 8px; }
+        .step-box {
+            background: rgba(108, 92, 231, 0.08);
+            border: 1px solid rgba(108, 92, 231, 0.2);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 16px 0;
+        }
+        .step-number {
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            background: #6C5CE7;
+            color: #fff;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 28px;
+            font-weight: 700;
+            font-size: 14px;
+            margin-right: 10px;
+        }
+        .warning {
+            background: rgba(255, 107, 107, 0.1);
+            border-left: 3px solid #ff6b6b;
+            padding: 16px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+        }
+        .warning p { color: #ff9999; margin-bottom: 0; }
+        .info {
+            background: rgba(108, 92, 231, 0.1);
+            border-left: 3px solid #6C5CE7;
+            padding: 16px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+        }
+        .info p { color: #ddd; margin-bottom: 0; }
+        .section { display: none; }
+        .section.active { display: block; }
+        .footer {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid #222;
+            text-align: center;
+            color: #666;
+            font-size: 13px;
+        }
+        a { color: #6C5CE7; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Spotter AI</h1>
+        <p class="subtitle" id="page-subtitle">Hesap Silme Talimatları</p>
+
+        <div class="lang-switcher">
+            <button class="lang-btn active" onclick="switchLang('tr')">Türkçe</button>
+            <button class="lang-btn" onclick="switchLang('en')">English</button>
+        </div>
+
+        <!-- TÜRKÇE -->
+        <div id="tr-content" class="section active">
+            <h2>Hesabınızı Nasıl Silebilirsiniz?</h2>
+            <p>Spotter AI hesabınızı ve ilişkili tüm verilerinizi kalıcı olarak silmek için aşağıdaki adımları izleyin:</p>
+
+            <div class="step-box">
+                <p><span class="step-number">1</span> Spotter AI uygulamasını açın ve hesabınızla giriş yapın.</p>
+            </div>
+            <div class="step-box">
+                <p><span class="step-number">2</span> Alt menüden <strong>Profil</strong> sekmesine gidin.</p>
+            </div>
+            <div class="step-box">
+                <p><span class="step-number">3</span> Sağ üst köşedeki <strong>Ayarlar</strong> (⚙️) simgesine dokunun.</p>
+            </div>
+            <div class="step-box">
+                <p><span class="step-number">4</span> Ayarlar sayfasının en altına kaydırın ve <strong>"Hesabı Sil"</strong> butonuna dokunun.</p>
+            </div>
+            <div class="step-box">
+                <p><span class="step-number">5</span> Onay ekranında <strong>"Evet, Hesabımı Sil"</strong> butonuna dokunarak silme işlemini tamamlayın.</p>
+            </div>
+
+            <div class="warning">
+                <p><strong>⚠️ Uyarı:</strong> Hesap silme işlemi geri alınamaz. Hesabınız silindiğinde aşağıdaki veriler kalıcı olarak kaldırılır.</p>
+            </div>
+
+            <h2>Silinen Veriler</h2>
+            <ul>
+                <li>Profil bilgileriniz (ad, kullanıcı adı, e-posta, boy, kilo, yaş, cinsiyet)</li>
+                <li>Antrenman geçmişiniz ve egzersiz kayıtlarınız</li>
+                <li>Oluşturduğunuz veya kaydettiğiniz antrenman programları</li>
+                <li>Kişisel rekorlarınız ve kilo takip verileriniz</li>
+                <li>Profil fotoğrafınız ve yüklediğiniz diğer medya dosyaları</li>
+                <li>Topluluk gönderileriniz ve mesajlarınız</li>
+                <li>Başarı rozetleriniz ve liderlik tablosu sıralamalarınız</li>
+                <li>Abonelik bilgileriniz (aktif abonelikler iptal edilmez; bunları ayrıca Google Play veya App Store üzerinden iptal etmeniz gerekmektedir)</li>
+            </ul>
+
+            <div class="info">
+                <p><strong>ℹ️ Not:</strong> Hesap silme işlemi 30 gün içinde tamamlanır. Bu süre zarfında verileriniz yedeklerden de kaldırılır. Yasal yükümlülükler gereği tutulması zorunlu olan veriler, ilgili mevzuatın öngördüğü süre boyunca anonim halde saklanabilir.</p>
+            </div>
+
+            <h2>Alternatif Yöntem</h2>
+            <p>Uygulamaya erişemiyorsanız, hesabınızın silinmesini GitHub üzerindeki <a href="https://github.com/generads-ai">generads-ai</a> organizasyonunun iletişim kanalları aracılığıyla talep edebilirsiniz. Talebiniz 30 gün içinde işleme alınacaktır.</p>
+        </div>
+
+        <!-- ENGLISH -->
+        <div id="en-content" class="section">
+            <h2>How to Delete Your Account</h2>
+            <p>Follow the steps below to permanently delete your Spotter AI account and all associated data:</p>
+
+            <div class="step-box">
+                <p><span class="step-number">1</span> Open the Spotter AI app and sign in to your account.</p>
+            </div>
+            <div class="step-box">
+                <p><span class="step-number">2</span> Go to the <strong>Profile</strong> tab from the bottom navigation.</p>
+            </div>
+            <div class="step-box">
+                <p><span class="step-number">3</span> Tap the <strong>Settings</strong> (⚙️) icon in the top-right corner.</p>
+            </div>
+            <div class="step-box">
+                <p><span class="step-number">4</span> Scroll to the bottom of the Settings page and tap <strong>"Delete Account"</strong>.</p>
+            </div>
+            <div class="step-box">
+                <p><span class="step-number">5</span> On the confirmation screen, tap <strong>"Yes, Delete My Account"</strong> to complete the process.</p>
+            </div>
+
+            <div class="warning">
+                <p><strong>⚠️ Warning:</strong> Account deletion is irreversible. When your account is deleted, the following data will be permanently removed.</p>
+            </div>
+
+            <h2>Data That Will Be Deleted</h2>
+            <ul>
+                <li>Your profile information (name, username, email, height, weight, age, gender)</li>
+                <li>Your workout history and exercise records</li>
+                <li>Training programs you created or saved</li>
+                <li>Personal records and weight tracking data</li>
+                <li>Profile photo and other uploaded media files</li>
+                <li>Community posts and messages</li>
+                <li>Achievement badges and leaderboard rankings</li>
+                <li>Subscription information (active subscriptions will not be cancelled automatically; you must cancel them separately through Google Play or App Store)</li>
+            </ul>
+
+            <div class="info">
+                <p><strong>ℹ️ Note:</strong> Account deletion is completed within 30 days. During this period, your data will also be removed from backups. Data required to be retained under legal obligations may be stored in anonymized form for the period prescribed by applicable legislation.</p>
+            </div>
+
+            <h2>Alternative Method</h2>
+            <p>If you cannot access the app, you can request account deletion through the communication channels of the <a href="https://github.com/generads-ai">generads-ai</a> organization on GitHub. Your request will be processed within 30 days.</p>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 Spotter AI — generads-ai</p>
+        </div>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            document.getElementById('tr-content').classList.toggle('active', lang === 'tr');
+            document.getElementById('en-content').classList.toggle('active', lang === 'en');
+            document.getElementById('page-subtitle').textContent =
+                lang === 'tr' ? 'Hesap Silme Talimatları' : 'Account Deletion Instructions';
+            document.querySelectorAll('.lang-btn').forEach(function(btn) {
+                btn.classList.toggle('active', btn.textContent.trim() === (lang === 'tr' ? 'Türkçe' : 'English'));
+            });
+        }
+    </script>
+</body>
+</html>
